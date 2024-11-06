@@ -16,18 +16,18 @@ services:
       - WORKSPACEFOLDER=/workspaces/antenna-ml-challenge
     env_file: Docker/parameters.env
 
-  app:
-    depends_on:
-      - mlflow
-    build:
-      context: .
-      dockerfile: Docker/app.Dockerfile
-    network_mode: service:db
-    # command: sleep infinity
-    environment:
-      - WORKSPACEFOLDER=/workspace/
-    env_file: Docker/parameters.env
-    restart: unless-stopped
+  # app:
+  #   depends_on:
+  #     - mlflow
+  #   build:
+  #     context: .
+  #     dockerfile: Docker/app.Dockerfile
+  #   network_mode: service:db
+  #   # command: sleep infinity
+  #   environment:
+  #     - WORKSPACEFOLDER=/workspace/
+  #   env_file: Docker/parameters.env
+  #   restart: unless-stopped
 
   mlflow:
     depends_on:

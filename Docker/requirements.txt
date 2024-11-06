@@ -10,7 +10,7 @@ imblearn
 fastapi
 pydantic
 uvicorn
-# tensorflow
-# keras
+tensorflow
+keras
 scikit-survival
 dython
